@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" styleClass="windowBackground" stylesheets="@CSS_accountpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="123.0" stylesheets="@CSS_accountpage.css">
+               <children>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" styleClass="headerBox" stylesheets="@CSS_accountpage.css">
+               <HBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </HBox.margin>
+               <children>
+                  <Label styleClass="header" text="Mín konta">
+                     <HBox.margin>
+                        <Insets left="20.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="600.0" spacing="2.0" styleClass="accountInfoBox" stylesheets="@CSS_accountpage.css">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <VBox.margin>
+                        <Insets left="40.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="accounttInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Navn">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2" />
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="accounttInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Brúkaranavn">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="accounttInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Tal av arbeiðum">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="accounttInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Tal av innritingum">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="600.0" spacing="2.0" styleClass="jobsInfoBox" stylesheets="@CSS_accountpage.css">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="jobInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Tímar tilsamans">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="jobInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Løn tilsamans v/skatt">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="jobInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Mest gevandi arbeiði">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="jobInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Mest tímar í arbeiði">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="600.0" spacing="2.0" styleClass="bestJobInfoBox" stylesheets="@CSS_accountpage.css">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="bestJobInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Arbeiðisnavn">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="bestJobInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Tímar tilsamans">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="bestJobInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Løn tilsamans v/skatt">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="200.0" styleClass="bestJobInsideBox1">
+                           <children>
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Løn í miðal pr. dag">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

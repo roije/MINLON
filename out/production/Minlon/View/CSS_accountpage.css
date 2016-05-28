@@ -1,0 +1,24 @@
+.backBtnLogo
+{
+    -fx-background-color: #ABB7B7;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.backBtnLogo:hover
+{
+    -fx-background-color: #BFBFBF;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.backBtn
+{
+    -fx-background-color: #BFBFBF;
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 14px;
+}
+

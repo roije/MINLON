@@ -1,0 +1,19 @@
+.jobInfoInsideBox1
+{
+    -fx-background-color: #2980b9;
+}
+
+.jobInfoInsideBox2
+{
+    -fx-background-color: #3498db;
+}
+
+.jobStatsInsideBox1
+{
+    -fx-background-color: #e67e22;
+}
+
+.jobStatsInsideBox2
+{
+    -fx-background-color: #f39c12;
+}

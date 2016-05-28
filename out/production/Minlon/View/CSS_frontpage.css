@@ -1,0 +1,87 @@
+.backGround
+{
+    -fx-background-color: #F7F7F7;
+}
+
+.welcomeTitle
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 28px;
+    -fx-text-fill: #939393;
+    -fx-font-weight: bold;
+}
+
+.myJobsLabel
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 16px;
+    -fx-text-fill: #939393;
+    -fx-font-weight: bold;
+}
+
+
+.whiteBox
+{
+    -fx-border-color: transparent transparent transparent #2ecc71;
+    -fx-background-color: #ffffff;
+    -fx-border-width: 3px;
+}
+
+.greenIconBtn
+{
+    -fx-background-color: #27ae60;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+
+.greenButton
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #2ecc71;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.greenButton:hover
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #27ae60;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.redIconBtn
+{
+    -fx-background-color: #c0392b;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.redButton
+ {
+     -fx-border-radius: 0;
+     -fx-background-radius: 0;
+     -fx-font-family: "Verdana";
+     -fx-text-fill: #ffffff;
+     -fx-background-color: #e74c3c;
+     -fx-font-size: 14px;
+     -fx-font-weight: bold;
+ }
+
+.redButton:hover
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #c0392b;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
