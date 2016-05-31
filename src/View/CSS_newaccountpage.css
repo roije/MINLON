@@ -1,0 +1,31 @@
+.grayLabel
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 16px;
+    -fx-text-fill: #939393;
+    -fx-font-weight: bold;
+}
+
+.saveBtn
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #2ecc71;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.textField
+{
+    fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 16px;
+}
+
+.background
+{
+    -fx-background-color: #F7F7F7;
+}

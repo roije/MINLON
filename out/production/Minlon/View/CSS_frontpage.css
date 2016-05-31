@@ -19,6 +19,12 @@
     -fx-font-weight: bold;
 }
 
+.headerBox
+{
+    -fx-border-color: transparent transparent transparent #2ecc71;
+    -fx-border-width: 3px;
+}
+
 
 .whiteBox
 {

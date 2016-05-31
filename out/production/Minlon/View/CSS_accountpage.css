@@ -12,9 +12,16 @@
     -fx-background-radius: 0;
 }
 
+.labels
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
 .backBtn
 {
-    -fx-background-color: #BFBFBF;
     -fx-border-radius: 0;
     -fx-border-width: 0;
     -fx-background-radius: 0;
@@ -22,3 +29,72 @@
     -fx-font-size: 14px;
 }
 
+.windowBackground
+{
+    -fx-background-color: #F7F7F7;
+}
+
+.header
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 18px;
+    -fx-text-fill: #939393;
+    -fx-font-weight: bold;
+}
+
+.headerBox
+{
+    -fx-border-color: transparent transparent transparent #2ecc71;
+    -fx-border-width: 3px;
+}
+
+.accountInfoBox
+{
+    -fx-background-color: #ffffff;
+    -fx-border-width: 3px;
+    -fx-border-color: transparent transparent transparent #2980b9;
+}
+
+.jobsInfoBox
+{
+    -fx-background-color: #ffffff;
+    -fx-border-width: 3px;
+    -fx-border-color: transparent transparent transparent #e67e22;
+}
+
+.bestJobInfoBox
+{
+    -fx-background-color: #ffffff;
+    -fx-border-width: 3px;
+    -fx-border-color: transparent transparent transparent #16a085;
+}
+
+.accounttInsideBox1
+ {
+     -fx-background-color: #2980b9;
+ }
+
+.accounttInsideBox2
+{
+    -fx-background-color: #3498db;
+}
+
+.jobInsideBox1
+{
+    -fx-background-color: #e67e22;
+}
+
+.jobInsideBox2
+{
+    -fx-background-color: #f39c12;
+}
+
+.bestJobInsideBox1
+{
+    -fx-background-color: #16a085;
+}
+
+.bestJobInsideBox2
+{
+    -fx-background-color: #1abc9c;
+}
