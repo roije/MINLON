@@ -1,0 +1,30 @@
+.table-view.header-background {
+    -fx-background-color:  #2ecc71;
+}
+
+.table-view .column-header .label
+{
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+
+}
+
+.table-view .column-header, .table-view .filler
+{
+    -fx-background-color:  #2ecc71;
+    -fx-border-color: gray;
+    -fx-border-width: 0.3px;
+}
+
+.subColumn
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #ffffff;
+
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
