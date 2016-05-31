@@ -29,3 +29,11 @@
 {
     -fx-background-color: #F7F7F7;
 }
+
+
+.extendChangePassword
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: #e67e22;
+}
