@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="123.0" stylesheets="@CSS_accountpage.css">
+               <children>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" styleClass="headerBox" stylesheets="@CSS_accountpage.css">
+               <children>
+                  <Label styleClass="header" text="Dagfør ">
+                     <HBox.margin>
+                        <Insets left="20.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="100.0" left="100.0" right="100.0" top="20.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox prefHeight="20.0" prefWidth="560.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="145.0" styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="Arbeiðsstaður: ">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="335.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="8.0" prefWidth="563.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="113.0" styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="Vanlig løn: ">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                     <HBox.margin>
+                        <Insets left="87.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="kr.">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="560.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="133.0" styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="1. yvirtíðsløn: ">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                     <HBox.margin>
+                        <Insets left="68.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="kr.">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="560.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="127.0" styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="2. yvirtíðsløn:">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                     <HBox.margin>
+                        <Insets left="74.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="kr.">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="2.0" prefWidth="559.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="141.0" styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="Leygardagsløn:">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                     <HBox.margin>
+                        <Insets left="62.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="kr.">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="8.0" prefWidth="560.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="193.0" styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="Sunnu-/heilidagsløn:">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label styleClass="grayLabel" stylesheets="@CSS_newjobpage.css" text="kr.">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="280.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
+                     <HBox.margin>
+                        <Insets left="263.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

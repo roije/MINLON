@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73841b41-0bae-4436-8bb9-659d94b2d422" name="Default" comment="newaccountpage">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Icons/CollapseArrow-48.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Controller_EditAccount.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/FXMLEditAccountPage_Window.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minlon/RunPackage/RunApp.class" afterPath="$PROJECT_DIR$/out/production/Minlon/RunPackage/RunApp.class" />
+    <list default="true" id="73841b41-0bae-4436-8bb9-659d94b2d422" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/FXMLEditJobPage_Window.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RunPackage/RunApp.java" afterPath="$PROJECT_DIR$/src/RunPackage/RunApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/CSS_newaccountpage.css" afterPath="$PROJECT_DIR$/src/View/CSS_newaccountpage.css" />
     </list>
     <ignored path="Minlon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,19 +33,6 @@
               <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="33" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FXMLNewAccountPage_Window.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/FXMLNewAccountPage_Window.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -133,15 +115,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller_EditAccount.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller_EditAccount.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/Controller_EditAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84771574">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FXMLEditJobPage_Window.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/FXMLEditJobPage_Window.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -151,8 +146,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="CSS File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -189,6 +184,7 @@
         <option value="$PROJECT_DIR$/src/View/FXMLEditAccountPage_Window.fxml" />
         <option value="$PROJECT_DIR$/src/RunPackage/RunApp.java" />
         <option value="$PROJECT_DIR$/src/Controller/Controller_EditAccount.java" />
+        <option value="$PROJECT_DIR$/src/View/FXMLEditJobPage_Window.css" />
       </list>
     </option>
   </component>
@@ -816,7 +812,7 @@
       <workItem from="1464591439324" duration="2000" />
       <workItem from="1464676688039" duration="4207000" />
       <workItem from="1464692744735" duration="4194000" />
-      <workItem from="1464716166086" duration="6136000" />
+      <workItem from="1464716166086" duration="6812000" />
     </task>
     <task id="LOCAL-00001" summary="TESTROI">
       <created>1464468561834</created>
@@ -848,11 +844,17 @@
       <option name="project" value="LOCAL" />
       <updated>1464702072308</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="editaccountpage">
+      <created>1464723643774</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1464723643774</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48700000" />
+    <option name="totallyTimeSpent" value="49376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="721" extended-state="6" />
@@ -900,7 +902,8 @@
     <MESSAGE value="joboverview" />
     <MESSAGE value="newdayogjobpage" />
     <MESSAGE value="newaccountpage" />
-    <option name="LAST_COMMIT_MESSAGE" value="newaccountpage" />
+    <MESSAGE value="editaccountpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="editaccountpage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -911,17 +914,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/View/FXMLLogin_Window.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/CSS_login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1349,12 +1341,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Controller_EditAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84771574">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/FXMLEditJobPage_Window.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>
