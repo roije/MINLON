@@ -1,5 +1,7 @@
 package RunPackage;
 
+import Database.DB_CreateDatabase;
+import Security.BCrypt;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +15,18 @@ public class RunApp extends Application
 {
     public static void main(String[] args)
     {
+
+        String  originalPassword = "roiroi";
+        String generatedSecuredPasswordHash = BCrypt.hashpw(originalPassword, BCrypt.gensalt(12));
+        System.out.println(BCrypt.gensalt());
+        System.out.println(generatedSecuredPasswordHash);
+
+        boolean matched = BCrypt.checkpw("roiroi", generatedSecuredPasswordHash);
+        System.out.println(matched);
+
+
+
+        DB_CreateDatabase.create();
         launch(args);
     }
 
