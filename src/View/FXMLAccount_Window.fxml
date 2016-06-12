@@ -207,7 +207,7 @@
                      <children>
                         <HBox prefHeight="32.0" prefWidth="200.0" styleClass="bestJobInsideBox1">
                            <children>
-                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Arbeiðisnavn">
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Arbeiðsnavn">
                                  <HBox.margin>
                                     <Insets left="10.0" top="6.0" />
                                  </HBox.margin>
