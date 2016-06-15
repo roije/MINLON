@@ -3,10 +3,33 @@
     -fx-background-color: #F7F7F7;
 }
 
+.minlonTitle1
+{
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ecc71;
+    -fx-font-size: 20px;
+}
+
+.minlonTitle2
+{
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #2ecc71;
+    -fx-font-size: 20px;
+}
+
+.dateLabel
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #939393;
+}
+
 .welcomeTitle
 {
     -fx-font-family: "Verdana";
-    -fx-font-size: 28px;
+    -fx-font-size: 22px;
     -fx-text-fill: #939393;
     -fx-font-weight: bold;
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background" stylesheets="@CSS_login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_LoginWindow">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" styleClass="background" stylesheets="@CSS_login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_LoginWindow">
    <center>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="538.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -28,17 +28,18 @@
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <VBox minHeight="-Infinity" prefHeight="328.0" prefWidth="370.0" spacing="15.0" stylesheets="@CSS_login.css">
                <children>
-                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="278.0" styleClass="iconBackground2">
+                  <HBox fx:id="userNameBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="278.0">
                      <children>
-                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="iconBackground2">
-                           <image>
-                              <Image url="@../Icons/User_gray.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets right="5.0" top="1.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" promptText="Brúkaranavn" styleClass="textField" stylesheets="@CSS_login.css" />
+                        <Button disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="icon">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/User%20Male-48_blackgray.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearError" prefHeight="40.0" prefWidth="230.0" promptText="Brúkaranavn" styleClass="textField" stylesheets="@CSS_login.css" />
                         <ImageView fx:id="loginError" fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Icons/Attention-48.png" />
@@ -52,17 +53,18 @@
                         <Insets left="10.0" />
                      </padding>
                   </HBox>
-                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="278.0" styleClass="iconBackground2">
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="278.0">
                      <children>
-                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="background2">
-                           <image>
-                              <Image url="@../Icons/Lock_gray.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets bottom="1.0" right="5.0" top="1.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" promptText="Loyniorð" styleClass="textField" stylesheets="@CSS_login.css" />
+                        <Button disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="icon">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/Lock-48_blackgray.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearError" prefHeight="40.0" prefWidth="230.0" promptText="Loyniorð" styleClass="textField" stylesheets="@CSS_login.css" />
                      </children>
                      <padding>
                         <Insets left="10.0" />
@@ -70,7 +72,7 @@
                   </HBox>
                   <HBox prefHeight="30.0" prefWidth="192.0">
                      <children>
-                        <Button fx:id="signInBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" stylesheets="@CSS_login.css" text="Rita inn">
+                        <Button fx:id="signInBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginAction" prefHeight="40.0" prefWidth="230.0" stylesheets="@CSS_login.css" text="Rita inn">
                            <styleClass>
                               <String fx:value="loginBtn" />
                               <String fx:value="greenButton" />

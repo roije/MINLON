@@ -1,5 +1,6 @@
 package Controller;
 
+import Database.DB_LoginHandler;
 import View.CurrentStage;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -24,6 +25,9 @@ import java.util.ResourceBundle;
  */
 public class Controller_LoginWindow implements Initializable
 {
+
+    private DB_LoginHandler loginHandler = new DB_LoginHandler();
+
     @FXML
     ImageView loginError;
 
@@ -63,6 +67,52 @@ public class Controller_LoginWindow implements Initializable
     {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLNewAccountPage_Window.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
+    }
+
+    public void loginAction()
+    {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+
+        if (password.isEmpty() || password.isEmpty())
+        {
+            loginError.setVisible(true);
+        }
+        else if (loginHandler.userExists(username, password))
+        {
+            //Set current session user blabla
+            //change to next window
+            changeToFrontPage();
+            loginHandler.updateLoginCount(username);
+        }
+        else
+        {
+            loginError.setVisible(true);
+        }
+    }
+
+    public void clearError()
+    {
+        loginError.setVisible(false);
+    }
+
+    public void changeToFrontPage()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLFrontPage_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
         Scene scene = new Scene(root);
         stage.setScene(scene);
 

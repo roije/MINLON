@@ -7,57 +7,23 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" styleClass="backGround" stylesheets="@CSS_frontpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="750.0" styleClass="whiteBox" stylesheets="@CSS_frontpage.css" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets left="25.0" right="25.0" top="25.0" />
-         </BorderPane.margin>
-         <children>
-            <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="563.0" styleClass="welcomeTitle" stylesheets="@CSS_frontpage.css" text="Góðan dagin, Rói.">
-               <HBox.margin>
-                  <Insets left="15.0" top="15.0" />
-               </HBox.margin>
-            </Label>
-            <VBox alignment="CENTER" prefHeight="98.0" prefWidth="132.0" spacing="10.0">
-               <children>
-                  <Label text="mánadagur">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
-                  <Label text="23. maj 2015">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <HBox.margin>
-                  <Insets left="40.0" />
-               </HBox.margin>
-            </VBox>
-         </children>
-      </HBox>
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" styleClass="backGround" stylesheets="@CSS_frontpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_FrontPage">
    <center>
       <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="418.0" prefWidth="456.0" styleClass="whiteBox" stylesheets="@CSS_frontpage.css">
+            <VBox prefHeight="418.0" prefWidth="456.0" spacing="20.0" styleClass="whiteBox" stylesheets="@CSS_frontpage.css">
                <HBox.margin>
-                  <Insets bottom="25.0" left="50.0" top="25.0" />
+                  <Insets bottom="75.0" left="80.0" top="40.0" />
                </HBox.margin>
                <children>
                   <Label prefHeight="50.0" prefWidth="110.0" styleClass="myJobsLabel" stylesheets="@CSS_frontpage.css" text="Míni arbeiði">
                      <VBox.margin>
-                        <Insets left="15.0" />
+                        <Insets left="30.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="373.0">
+                  <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="325.0">
                      <VBox.margin>
-                        <Insets bottom="20.0" left="38.0" />
+                        <Insets bottom="20.0" left="60.0" />
                      </VBox.margin>
                   </ListView>
                </children>
@@ -75,7 +41,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="192.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Nýtt arbeiði" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Nýtt arbeiði" />
                      </children>
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="240.0">
@@ -89,7 +55,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="192.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Mín konta" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Mín konta" />
                      </children>
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="200.0">
@@ -103,7 +69,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="192.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Dagfør konto" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Dagfør konto" />
                      </children>
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="240.0">
@@ -117,15 +83,56 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="192.0" styleClass="redButton" stylesheets="@CSS_frontpage.css" text="Rita út" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="redButton" stylesheets="@CSS_frontpage.css" text="Rita út" />
                      </children>
                   </HBox>
                </children>
                <HBox.margin>
-                  <Insets top="25.0" />
+                  <Insets top="40.0" />
                </HBox.margin>
             </VBox>
          </children>
       </HBox>
    </center>
+   <top>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="829.0" styleClass="whiteBox" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="764.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="42.5" styleClass="minlonTitle1" text="mín" />
+                  <Label prefHeight="25.0" prefWidth="33.0" styleClass="minlonTitle2" text="løn" />
+               </children>
+               <VBox.margin>
+                  <Insets left="60.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="headerLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="563.0" styleClass="welcomeTitle" stylesheets="@CSS_frontpage.css" text="Góðan dagin, *insert name*.">
+                     <HBox.margin>
+                        <Insets left="60.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <VBox alignment="TOP_RIGHT" prefHeight="75.0" prefWidth="203.0">
+                     <children>
+                        <Label fx:id="dayLabel" styleClass="dateLabel" text="mánadagur">
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="dateLabel" styleClass="dateLabel" text="15. juni 2016">
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
 </BorderPane>
