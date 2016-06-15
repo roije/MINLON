@@ -23,9 +23,9 @@ public class DB_Tables
 
             sqlString = "CREATE TABLE IF NOT EXISTS Users " +
                     "(userId TINYINT(4) NOT NULL AUTO_INCREMENT, " +
-                    "firstName VARCHAR(30) NOT NULL," +
-                    "lastName VARCHAR(30) NOT NULL, " +
-                    "username VARCHAR(15) NOT NULL, " +
+                    "firstName VARCHAR(50) NOT NULL," +
+                    "lastName VARCHAR(50) NOT NULL, " +
+                    "username VARCHAR(30) NOT NULL, " +
                     "passwordHash VARCHAR(60) NOT NULL, " +
                     "loginCount INTEGER NOT NULL DEFAULT 0, " +
                     "PRIMARY KEY (userId))";

@@ -38,7 +38,7 @@
                               <Insets right="5.0" top="1.0" />
                            </HBox.margin>
                         </ImageView>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" promptText="Brúkaranavn" styleClass="textField" stylesheets="@CSS_login.css" />
+                        <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" promptText="Brúkaranavn" styleClass="textField" stylesheets="@CSS_login.css" />
                         <ImageView fx:id="loginError" fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Icons/Attention-48.png" />
@@ -62,7 +62,7 @@
                               <Insets bottom="1.0" right="5.0" top="1.0" />
                            </HBox.margin>
                         </ImageView>
-                        <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" promptText="Loyniorð" styleClass="textField" stylesheets="@CSS_login.css" />
+                        <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" promptText="Loyniorð" styleClass="textField" stylesheets="@CSS_login.css" />
                      </children>
                      <padding>
                         <Insets left="10.0" />
@@ -70,7 +70,7 @@
                   </HBox>
                   <HBox prefHeight="30.0" prefWidth="192.0">
                      <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" stylesheets="@CSS_login.css" text="Rita inn">
+                        <Button fx:id="signInBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" stylesheets="@CSS_login.css" text="Rita inn">
                            <styleClass>
                               <String fx:value="loginBtn" />
                               <String fx:value="greenButton" />
@@ -92,7 +92,7 @@
                   </HBox>
                   <HBox prefHeight="30.0" prefWidth="192.0">
                      <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" styleClass="orangeButton" stylesheets="@CSS_login.css" text="Stovna konto" />
+                        <Button fx:id="createAccountBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToNewAccountWindow" prefHeight="40.0" prefWidth="230.0" styleClass="orangeButton" stylesheets="@CSS_login.css" text="Stovna konto" />
                      </children>
                      <VBox.margin>
                         <Insets left="50.0" />

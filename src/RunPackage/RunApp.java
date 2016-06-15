@@ -3,6 +3,7 @@ package RunPackage;
 import Database.DB_CreateDatabase;
 import Database.DB_Tables;
 import Security.BCrypt;
+import View.CurrentStage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -37,6 +38,10 @@ public class RunApp extends Application
         Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLLogin_Window.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.show();
+
+        CurrentStage.setCurrentStage(primaryStage);
+        CurrentStage.showCurrentStage();
     }
+
+
 }

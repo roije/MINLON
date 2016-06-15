@@ -6,14 +6,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" styleClass="background" stylesheets="@CSS_newaccountpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" styleClass="background" stylesheets="@CSS_newaccountpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_NewAccount">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="123.0" stylesheets="@CSS_accountpage.css">
                <children>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
+                  <Button fx:id="backBtnLogo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -25,7 +24,7 @@
                         <Insets right="5.0" />
                      </padding>
                   </Button>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur">
+                  <Button fx:id="backBtnText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -58,8 +57,11 @@
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0">
                <children>
-                  <Label styleClass="grayLabel" text="Fornavn:" />
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <Label styleClass="grayLabel" text="Fornavn:">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="firstNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="117.0" />
                      </HBox.margin>
@@ -71,8 +73,11 @@
             </HBox>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0">
                <children>
-                  <Label styleClass="grayLabel" text="Eftirnavn:" />
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <Label styleClass="grayLabel" text="Eftirnavn:">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="lastNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="109.0" />
                      </HBox.margin>
@@ -84,12 +89,23 @@
             </HBox>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0">
                <children>
-                  <Label styleClass="grayLabel" text="Brúkaranavn: " />
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <Label styleClass="grayLabel" text="Brúkaranavn: ">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="userNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearErrors" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="70.0" />
                      </HBox.margin>
                   </TextField>
+                  <ImageView fx:id="userNameError" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/Attention-48.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
                </children>
                <VBox.margin>
                   <Insets left="40.0" />
@@ -97,12 +113,23 @@
             </HBox>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0">
                <children>
-                  <Label styleClass="grayLabel" text="Loyniorð:" />
-                  <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <Label styleClass="grayLabel" text="Loyniorð:">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Label>
+                  <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearErrors" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="112.0" />
                      </HBox.margin>
                   </PasswordField>
+                  <ImageView fx:id="passwordError" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/Attention-48.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
                </children>
                <VBox.margin>
                   <Insets left="40.0" />
@@ -110,8 +137,11 @@
             </HBox>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0">
                <children>
-                  <Label styleClass="grayLabel" text="Endurtak loyniorð:" />
-                  <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <Label styleClass="grayLabel" text="Endurtak loyniorð:">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Label>
+                  <PasswordField fx:id="confirmPasswordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearErrors" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
@@ -121,15 +151,20 @@
                   <Insets left="40.0" />
                </VBox.margin>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="44.0" prefWidth="600.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="262.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveBtnAction" prefHeight="39.0" prefWidth="262.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
                      <HBox.margin>
                         <Insets left="238.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
+            <Label fx:id="errorLabel" styleClass="errorLabel" text="Label">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Label>
          </children>
       </VBox>
    </center>
