@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
@@ -21,7 +22,7 @@
                         <Insets left="30.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="325.0">
+                  <ListView fx:id="jobsList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="325.0" stylesheets="@CSS_listview.css">
                      <VBox.margin>
                         <Insets bottom="20.0" left="60.0" />
                      </VBox.margin>
@@ -41,7 +42,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Nýtt arbeiði" />
+                        <Button fx:id="newJobBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToNewJobWindow" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Nýtt arbeiði" />
                      </children>
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="240.0">
@@ -55,7 +56,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Mín konta" />
+                        <Button fx:id="myAccountBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Mín konta" />
                      </children>
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="200.0">
@@ -69,7 +70,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Dagfør konto" />
+                        <Button fx:id="updateAccountBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="greenButton" stylesheets="@CSS_frontpage.css" text="Dagfør konto" />
                      </children>
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="240.0">
@@ -83,7 +84,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="redButton" stylesheets="@CSS_frontpage.css" text="Rita út" />
+                        <Button fx:id="signOutBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="redButton" stylesheets="@CSS_frontpage.css" text="Rita út" />
                      </children>
                   </HBox>
                </children>
@@ -113,7 +114,7 @@
                         <Insets left="60.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <VBox alignment="TOP_RIGHT" prefHeight="75.0" prefWidth="203.0">
+                  <VBox alignment="TOP_RIGHT" prefHeight="75.0" prefWidth="203.0" spacing="5.0">
                      <children>
                         <Label fx:id="dayLabel" styleClass="dateLabel" text="mánadagur">
                            <VBox.margin>

@@ -1,10 +1,21 @@
 package Controller;
 
 import Model.Session;
+import View.CurrentStage;
+import com.sun.xml.internal.ws.api.FeatureConstructor;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,13 +30,13 @@ public class Controller_FrontPage implements Initializable
     private Calendar calendar = Calendar.getInstance();
 
     @FXML
-    Label headerLabel;
+    Label headerLabel, dayLabel, dateLabel;
 
     @FXML
-    Label dayLabel;
+    ListView jobsList;
 
     @FXML
-    Label dateLabel;
+    Button newJobBtn, myAccountBtn, updateAccountBtn, signOutBtn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -50,6 +61,22 @@ public class Controller_FrontPage implements Initializable
         //Set the date
         dateLabel.setText(getDate(currentTime));
 
+        ObservableList<String> test = FXCollections.observableArrayList();
+        test.addAll("Bob", "haha", "yes");
+        jobsList.setItems(test);
+
+    }
+
+    public void changeToNewJobWindow() throws IOException
+    {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLNewJobPage.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
     }
 
     public int checkTimeOfDay()
@@ -117,7 +144,7 @@ public class Controller_FrontPage implements Initializable
 
         System.out.println(nameOfMonth);
 
-        String date = currentTime.toString().substring(8,9);
+        String date = currentTime.toString().substring(8,10);
 
         String year = currentTime.toString().substring(25,29);
         System.out.println(year);
