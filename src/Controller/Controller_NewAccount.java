@@ -13,7 +13,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -30,7 +32,7 @@ public class Controller_NewAccount implements Initializable
 
 
     @FXML
-    Button saveBtn, backBtnText, backBtnLogo;
+    Button saveBtn, backBtnText, backBtnLogo, toLoginPageBtn;
 
     @FXML
     TextField firstNameField, lastNameField, userNameField;
@@ -48,19 +50,20 @@ public class Controller_NewAccount implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        //Error is initially not visible
-        userNameError.setVisible(false);
-        passwordError.setVisible(false);
-
-        //Error label is initially not visible
-        errorLabel.setVisible(false);
 
     }
 
-    public void changeToPreviousWindow() throws IOException
+    public void changeToPreviousWindow()
     {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLLogin_Window.fxml"));
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLLogin_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
         Scene scene = new Scene(root);
         stage.setScene(scene);
 
@@ -71,9 +74,6 @@ public class Controller_NewAccount implements Initializable
 
     public void saveBtnAction()
     {
-        //Check if user exists method goes here:
-        //if user exitsts:
-
         //Turn fields in GUI to right datatype, so that they can be saved in database.
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
@@ -81,7 +81,12 @@ public class Controller_NewAccount implements Initializable
         String password = passwordField.getText();
         String confPassword = confirmPasswordField.getText();
 
-        if(accountHandler.userExists(username))
+        if (fieldIsEmpty(firstName,lastName,username,password,confPassword))
+        {
+            errorLabel.setText("Vinarliga útfyll øll feltir");
+            errorLabel.setVisible(true);
+        }
+        else if(accountHandler.userExists(username))
         {
             errorLabel.setText("Brúkaranavn er ikki tøkt");
             errorLabel.setVisible(true);
@@ -97,9 +102,15 @@ public class Controller_NewAccount implements Initializable
         {
             String encryptPass = BCrypt.hashpw(password, BCrypt.gensalt(12));
             accountHandler.saveUser(firstName, lastName, username, encryptPass);
+            saveBtn.setDisable(true);
+            try
+            {
+                openPopUp();
+            } catch (IOException e)
+            {
+                e.printStackTrace();
+            }
         }
-
-        //If user does not exist, continue to save in database
     }
 
     //Clear error image when user name textfield is clicked
@@ -113,6 +124,32 @@ public class Controller_NewAccount implements Initializable
     public boolean passwordsMatch(String password, String confirmPassword)
     {
         if (password.equals(confirmPassword))
+            return true;
+        else return false;
+    }
+
+    public void openPopUp() throws IOException
+    {
+        Stage popupStage = new Stage();
+        popupStage.initStyle(StageStyle.UNDECORATED);
+        Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLAccountCreated_Popup.fxml"));
+        Scene scene = new Scene(root);
+        popupStage.setScene(scene);
+        popupStage.show();
+    }
+
+    public void closePopUp()
+    {
+        //Change to login page
+        changeToPreviousWindow();
+
+        Stage popupStage = (Stage) toLoginPageBtn.getScene().getWindow();
+        popupStage.close();
+    }
+
+    public boolean fieldIsEmpty(String firstName, String lastName, String userName, String password, String confirmPass)
+    {
+        if (firstName.isEmpty() || lastName.isEmpty() || userName.isEmpty() || password.isEmpty() || confirmPass.isEmpty())
             return true;
         else return false;
     }

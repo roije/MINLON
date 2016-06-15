@@ -61,7 +61,7 @@
                      <HBox.margin>
                         <Insets top="5.0" />
                      </HBox.margin></Label>
-                  <TextField fx:id="firstNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <TextField fx:id="firstNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearErrors" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="117.0" />
                      </HBox.margin>
@@ -77,7 +77,7 @@
                      <HBox.margin>
                         <Insets top="5.0" />
                      </HBox.margin></Label>
-                  <TextField fx:id="lastNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <TextField fx:id="lastNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearErrors" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="109.0" />
                      </HBox.margin>
@@ -98,7 +98,7 @@
                         <Insets left="70.0" />
                      </HBox.margin>
                   </TextField>
-                  <ImageView fx:id="userNameError" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userNameError" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
                      <image>
                         <Image url="@../Icons/Attention-48.png" />
                      </image>
@@ -122,7 +122,7 @@
                         <Insets left="112.0" />
                      </HBox.margin>
                   </PasswordField>
-                  <ImageView fx:id="passwordError" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="passwordError" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
                      <image>
                         <Image url="@../Icons/Attention-48.png" />
                      </image>
@@ -160,7 +160,7 @@
                   </Button>
                </children>
             </HBox>
-            <Label fx:id="errorLabel" styleClass="errorLabel" text="Label">
+            <Label fx:id="errorLabel" styleClass="errorLabel" text="Label" visible="false">
                <VBox.margin>
                   <Insets left="40.0" />
                </VBox.margin>
