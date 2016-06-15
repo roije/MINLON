@@ -28,16 +28,17 @@
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <VBox minHeight="-Infinity" prefHeight="328.0" prefWidth="370.0" spacing="15.0" stylesheets="@CSS_login.css">
                <children>
-                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="278.0" styleClass="iconBackground2">
+                  <HBox fx:id="userNameBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="278.0">
                      <children>
-                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="iconBackground2">
-                           <image>
-                              <Image url="@../Icons/User_gray.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets right="5.0" top="1.0" />
-                           </HBox.margin>
-                        </ImageView>
+                        <Button disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="icon">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/User%20Male-48_blackgray.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                         <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" promptText="Brúkaranavn" styleClass="textField" stylesheets="@CSS_login.css" />
                         <ImageView fx:id="loginError" fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -52,16 +53,17 @@
                         <Insets left="10.0" />
                      </padding>
                   </HBox>
-                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="278.0" styleClass="iconBackground2">
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="278.0">
                      <children>
-                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="background2">
-                           <image>
-                              <Image url="@../Icons/Lock_gray.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets bottom="1.0" right="5.0" top="1.0" />
-                           </HBox.margin>
-                        </ImageView>
+                        <Button disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="icon">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/Lock-48_blackgray.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                         <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0" promptText="Loyniorð" styleClass="textField" stylesheets="@CSS_login.css" />
                      </children>
                      <padding>

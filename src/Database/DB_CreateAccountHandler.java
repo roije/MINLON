@@ -8,8 +8,9 @@ import java.sql.SQLException;
 
 /**
  * Created by roije on 12/06/2016.
+ * This class has methods which manipulate or work with database to create a new account
  */
-public class DB_UserAccountHandler
+public class DB_CreateAccountHandler
 {
     //Connector to Database
     private Connection databaseConnector = DB_Connector.getConnection();

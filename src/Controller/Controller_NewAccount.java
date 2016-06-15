@@ -1,8 +1,10 @@
 package Controller;
 
-import Database.DB_UserAccountHandler;
+import Database.DB_CreateAccountHandler;
 import Security.BCrypt;
 import View.CurrentStage;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,7 +15,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -28,7 +29,7 @@ public class Controller_NewAccount implements Initializable
 {
 
     //This object has methods to work on account table in database
-    private DB_UserAccountHandler accountHandler = new DB_UserAccountHandler();
+    private DB_CreateAccountHandler accountHandler = new DB_CreateAccountHandler();
 
 
     @FXML
@@ -147,6 +148,7 @@ public class Controller_NewAccount implements Initializable
         popupStage.close();
     }
 
+    //Check if one of textfields in empty
     public boolean fieldIsEmpty(String firstName, String lastName, String userName, String password, String confirmPass)
     {
         if (firstName.isEmpty() || lastName.isEmpty() || userName.isEmpty() || password.isEmpty() || confirmPass.isEmpty())
