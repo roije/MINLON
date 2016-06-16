@@ -1,9 +1,11 @@
 package Database;
 
+import Model.Job;
 import Model.Session;
 import com.mysql.jdbc.Connection;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -35,5 +37,34 @@ public class DB_NewJobHandler
         {
             e.printStackTrace();
         }
+    }
+
+    public Job getNewestJob()
+    {
+        String sqlQuery = "SELECT * FROM Jobs ORDER BY jobId DESC LIMIT 1";
+        ResultSet rs;
+        Job job = new Job();
+        try
+        {
+            rs = databaseConnector.createStatement().executeQuery(sqlQuery);
+            if (rs.next())
+            {
+                job.setJobName(rs.getString("jobName"));
+                job.setJobId(rs.getInt("jobId"));
+                job.setRegularPay(rs.getDouble("regularPay"));
+                job.setFirstOverPay(rs.getDouble("firstOverPay"));
+                job.setSecondOverPay(rs.getDouble("secondOverPay"));
+                job.setSaturdayPay(rs.getDouble("saturdayPay"));
+                job.setSundayPay(rs.getDouble("sundayPay"));
+                job.setTotalPay(rs.getDouble("totalPay"));
+                job.setTotalDays(rs.getInt("totalDays"));
+                job.setTotalHours(rs.getInt("totalHours"));
+            }
+
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return job;
     }
 }

@@ -7,6 +7,7 @@ import View.CurrentStage;
 import com.sun.xml.internal.ws.api.FeatureConstructor;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
@@ -39,7 +41,7 @@ public class Controller_FrontPage implements Initializable
     Label headerLabel, dayLabel, dateLabel;
 
     @FXML
-    ListView jobsList;
+    ListView<Job> jobsList;
 
     @FXML
     Button newJobBtn, myAccountBtn, updateAccountBtn, signOutBtn;
@@ -97,12 +99,50 @@ public class Controller_FrontPage implements Initializable
             }
         });
 
+        //Double click on item in listview to open a new window with chosen job information
+        jobsList.setOnMouseClicked(new EventHandler<MouseEvent>()
+        {
+
+            @Override
+            public void handle(MouseEvent click)
+            {
+                if (click.getClickCount() == 2)
+                {
+                    //Use ListView's getSelected Item
+                    Job job = jobsList.getSelectionModel().getSelectedItem();
+                    //Set current sessions job to be the selected job
+                    Session.setCurrentJob(job);
+                    //Open Job page window
+                    changeToJobPageWindow();
+                }
+            }
+        });
+
     }
 
     public void changeToNewJobWindow() throws IOException
     {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLNewJobPage.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
+    }
+
+    public void changeToJobPageWindow()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLJobPage_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
         Scene scene = new Scene(root);
         stage.setScene(scene);
 
@@ -182,5 +222,24 @@ public class Controller_FrontPage implements Initializable
         System.out.println(year);
 
         return date + ". " + nameOfMonth + " " + year;
+    }
+
+    public void signOutAction()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLLogin_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
     }
 }

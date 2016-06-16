@@ -17,3 +17,10 @@
 {
     -fx-background-color: #f39c12;
 }
+
+.moneyLabel
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+}

@@ -1,6 +1,7 @@
 package Controller;
 
 import Database.DB_NewJobHandler;
+import Model.Session;
 import View.CurrentStage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -88,6 +89,10 @@ public class Controller_NewJob implements Initializable
             double sundaydoub = Double.parseDouble(sundayFormatted);
 
             newJobHandler.saveJob(name,regularPaydoub,firstOverdoub,secondOverdoub,saturdaydoub,sundaydoub);
+            Session.setPreviousWindow("newjob");
+            Session.setCurrentJob(newJobHandler.getNewestJob());
+            changeToJobPageWindow();
+
         }
         else if (!validJobName(name))
         {
@@ -135,6 +140,24 @@ public class Controller_NewJob implements Initializable
         errorBox.setVisible(false);
     }
 
+    public void changeToJobPageWindow()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLJobPage_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
+    }
 
 
 }

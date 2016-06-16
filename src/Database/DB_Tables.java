@@ -50,9 +50,9 @@ public class DB_Tables
                     "secondOverPay DOUBLE NOT NULL, " +
                     "saturdayPay DOUBLE NOT NULL, " +
                     "sundayPay DOUBLE NOT NULL, " +
-                    "totalPay INT NOT NULL DEFAULT 0, " +
-                    "totalDays MEDIUMINT NOT NULL DEFAULT 0, " +
-                    "totalHours MEDIUMINT NOT NULL DEFAULT 0, " +
+                    "totalPay DOUBLE NOT NULL DEFAULT 0, " +
+                    "totalDays INTEGER NOT NULL DEFAULT 0, " +
+                    "totalHours INTEGER NOT NULL DEFAULT 0, " +
                     "userId TINYINT NOT NULL," +
                     "FOREIGN KEY (userId) REFERENCES Users(userId), " +
                     "PRIMARY KEY (jobId))";
