@@ -1,5 +1,7 @@
 package Controller;
 
+import Database.DB_FrontPageHandler;
+import Model.Job;
 import Model.Session;
 import View.CurrentStage;
 import com.sun.xml.internal.ws.api.FeatureConstructor;
@@ -12,8 +14,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,6 +33,8 @@ public class Controller_FrontPage implements Initializable
     //Object is used to get the date, day and right greeting in several methods in this class
     private Calendar calendar = Calendar.getInstance();
 
+    private DB_FrontPageHandler frontPageHandler = new DB_FrontPageHandler();
+
     @FXML
     Label headerLabel, dayLabel, dateLabel;
 
@@ -37,6 +43,8 @@ public class Controller_FrontPage implements Initializable
 
     @FXML
     Button newJobBtn, myAccountBtn, updateAccountBtn, signOutBtn;
+
+    private ObservableList<Job> data;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -61,9 +69,33 @@ public class Controller_FrontPage implements Initializable
         //Set the date
         dateLabel.setText(getDate(currentTime));
 
-        ObservableList<String> test = FXCollections.observableArrayList();
-        test.addAll("Bob", "haha", "yes");
-        jobsList.setItems(test);
+        //Fill the listview
+        data = frontPageHandler.getJobs(Session.getCurrentUser());
+        jobsList.setItems(data);
+
+        //Because the observable list is containing Job objects, and I only want it to have the
+        //Job name, and not some weird ass shit, this is necesserary. Not really sure about this,
+        //but it works Link: http://java-buddy.blogspot.dk/2013/05/implement-javafx-listview-for-custom.html
+        jobsList.setCellFactory(new Callback<ListView<Job>, ListCell<Job>>()
+        {
+            @Override
+            public ListCell<Job> call(ListView<Job> p)
+            {
+                ListCell<Job> cell = new ListCell<Job>()
+                {
+                    @Override
+                    protected void updateItem(Job t, boolean bln)
+                    {
+                        super.updateItem(t, bln);
+                        if (t != null)
+                        {
+                            setText(t.getJobName());
+                        }
+                    }
+                };
+                return cell;
+            }
+        });
 
     }
 

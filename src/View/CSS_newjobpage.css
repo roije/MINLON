@@ -13,7 +13,18 @@
     -fx-font-family: "Verdana";
     -fx-text-fill: #ffffff;
     -fx-background-color: #2ecc71;
-    -fx-font-size: 20px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.saveBtn:hover
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #27ae60;
+    -fx-font-size: 14px;
     -fx-font-weight: bold;
 }
 
@@ -22,7 +33,7 @@
     fx-border-radius: 0;
     -fx-background-radius: 0;
     -fx-font-family: "Verdana";
-    -fx-font-size: 20px;
+    -fx-font-size: 16px;
 }
 
 .infoLabel
@@ -30,4 +41,12 @@
     -fx-font-family: "Verdana";
     -fx-font-size: 14px;
     -fx-text-fill: #2ecc71;
+}
+
+.errorLabel
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 14px;
+    -fx-text-fill: #CF000F;
+    -fx-font-weight: bold;
 }
