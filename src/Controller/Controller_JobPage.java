@@ -98,7 +98,8 @@ public class Controller_JobPage implements Initializable
         }
         else
         {
-            //If the previous window was the create window, return to it.
+            //If the previous window was the create window, return to NewJobWindow.
+            //Set previous window to null
             Session.setPreviousWindow(null);
             Stage stage = new Stage();
             Parent root = null;

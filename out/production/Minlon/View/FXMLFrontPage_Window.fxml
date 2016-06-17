@@ -109,7 +109,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="headerLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="563.0" styleClass="welcomeTitle" stylesheets="@CSS_frontpage.css" text="Góðan dagin, *insert name*.">
+                  <Label fx:id="headerLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="624.0" styleClass="welcomeTitle" stylesheets="@CSS_frontpage.css" text="Góðan dagin, *insert name*.">
                      <HBox.margin>
                         <Insets left="60.0" top="10.0" />
                      </HBox.margin>

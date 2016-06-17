@@ -88,6 +88,10 @@ public class Controller_NewJob implements Initializable
             double saturdaydoub = Double.parseDouble(saturdayFormatted);
             double sundaydoub = Double.parseDouble(sundayFormatted);
 
+            //Save in database.
+            //Set the previous window string in Session class to "newjob". The reason for this is that I want
+            //the user to come back to job creation after he has created a new job and is in job page.
+            //newJobHandler gets the latest element in the database (this job) and makes it the current job in Session
             newJobHandler.saveJob(name,regularPaydoub,firstOverdoub,secondOverdoub,saturdaydoub,sundaydoub);
             Session.setPreviousWindow("newjob");
             Session.setCurrentJob(newJobHandler.getNewestJob());

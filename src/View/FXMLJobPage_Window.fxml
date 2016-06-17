@@ -55,7 +55,7 @@
                   </Button>
                </children>
             </HBox>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" styleClass="headerBox" stylesheets="@CSS_accountpage.css">
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="560.0" styleClass="headerBox" stylesheets="@CSS_accountpage.css">
                <children>
                   <Label fx:id="jobNameLabel" styleClass="header" text="arbeiðsnavn">
                      <HBox.margin>
@@ -413,7 +413,7 @@
                            <graphic>
                               <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../out/production/Minlon/Icons/Calendar-48.png" />
+                                    <Image url="@../Icons/Calendar-48.png" />
                                  </image>
                               </ImageView>
                            </graphic>
