@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 /**
@@ -40,32 +41,50 @@ public class Controller_JobPage implements Initializable
         sundayLabel.setText(String.valueOf(Session.getCurrentJob().getSundayPay()));
         totalHoursLabel.setText(String.valueOf(Session.getCurrentJob().getTotalHours()));
         totalDaysLabel.setText(String.valueOf(Session.getCurrentJob().getTotalDays()));
+
         beforeTaxLabel.setText(String.valueOf(Session.getCurrentJob().getTotalPay()));
         afterTaxLabel.setText(String.valueOf(calcTaxPay(Session.getCurrentJob().getTotalPay())));
         averageLabel.setText(String.valueOf(calcAveragePay(Session.getCurrentJob().getTotalDays(),
                 Session.getCurrentJob().getTotalPay())));
         holidayLabel.setText(String.valueOf(calcHoliday(Session.getCurrentJob().getTotalPay())));
+
+        if (Session.getCurrentJob().getTotalDays() == 0)
+        {
+            afterTaxLabel.setText("0.0");
+            averageLabel.setText("0.0");
+            holidayLabel.setText("0.0");
+        }
+
     }
 
-    public double calcTaxPay(double totalPay)
+    public String calcTaxPay(double totalPay)
     {
+        String returnString;
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
         double tax = 0.40;
-        return totalPay - (totalPay * tax);
+        returnString = numberFormat.format(totalPay - (totalPay * tax)).replace(",",".");
+        return returnString;
     }
 
-    public double calcAveragePay(int totalDays, double totalPay)
+    public String calcAveragePay(int totalDays, double totalPay)
     {
+        String returnString;
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
         if (totalDays != 0)
         {
-            return totalPay/totalDays;
+            returnString = numberFormat.format(totalPay/totalDays).replace(",",".");
+            return returnString;
         }
-        return 0;
+        return "0.0";
     }
 
-    public double calcHoliday(double totalPay)
+    public String calcHoliday(double totalPay)
     {
+        String returnString;
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
         double holidayPercentage = 0.12;
-        return totalPay * holidayPercentage;
+        returnString = numberFormat.format(totalPay * holidayPercentage).replace(",",".");
+        return returnString;
     }
 
 

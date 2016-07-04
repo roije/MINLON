@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,6 +25,12 @@ public class Controller_NewDay implements Initializable
     @FXML
     DatePicker datePicker;
 
+    @FXML
+    ImageView errorIcon;
+
+    @FXML
+    Label errorLabel;
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -38,13 +46,22 @@ public class Controller_NewDay implements Initializable
 
     public void saveBtnAction()
     {
+        //If day doesn't already exists
         if (!newDayHandler.dayExists(Session.getCurrentJob().getJobId(), datePicker))
         {
             newDayHandler.saveDay(datePicker, fromBox, toBox);
         }
         else
         {
-            System.out.println("Day already saved");
+            errorIcon.setVisible(true);
+            errorLabel.setText("Dagur er longu skrásettur");
+            errorLabel.setVisible(true);
         }
+    }
+
+    public void clearErrors()
+    {
+        errorIcon.setVisible(false);
+        errorLabel.setVisible(false);
     }
 }

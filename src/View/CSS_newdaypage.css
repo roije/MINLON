@@ -65,3 +65,11 @@
     -fx-background-color: #27ae60;
     -fx-text-fill: #ffffff;
 }
+
+.errorLabel
+{
+    -fx-font-family: "Verdana";
+    -fx-font-size: 14px;
+    -fx-text-fill: #CF000F;
+    -fx-font-weight: bold;
+}

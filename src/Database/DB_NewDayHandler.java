@@ -9,6 +9,7 @@ import javafx.scene.control.DatePicker;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -24,6 +25,7 @@ public class DB_NewDayHandler
 
     public void saveDay(DatePicker datePicker, ComboBox start, ComboBox end)
     {
+        int currentJobId = Session.getCurrentJob().getJobId();
         String dayName = getDayName(datePicker);
         int startTime = timeToInteger(start);
         int endTime = timeToInteger(end);
@@ -79,7 +81,7 @@ public class DB_NewDayHandler
             preparedStatement.setInt(7, saturdayHours);
             preparedStatement.setInt(8, sundayHours);
             preparedStatement.setDouble(9, totalPay);
-            preparedStatement.setInt(10, Session.getCurrentJob().getJobId());
+            preparedStatement.setInt(10, currentJobId);
 
             preparedStatement.executeUpdate();
         }
@@ -87,6 +89,11 @@ public class DB_NewDayHandler
         {
             e.printStackTrace();
         }
+
+        //Updating job rows in the database
+        updateJobTotalPay(currentJobId, totalPay);
+        updateJobHours(currentJobId, totalHours);
+        updateJobDays(currentJobId, countDays(currentJobId));
     }
 
     public String getDayName(DatePicker datePicker)
@@ -280,6 +287,77 @@ public class DB_NewDayHandler
             e.printStackTrace();
         }
         return exists;
+    }
+
+    public void updateJobTotalPay(int jobId, double payment)
+    {
+
+        try
+        {
+            Statement stmt = databaseConnector.createStatement();
+            String sqlString = "UPDATE Jobs SET totalPay = totalPay + '"+payment+"' WHERE jobId = '"+jobId+"'";
+            stmt.executeUpdate(sqlString);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateJobHours(int jobId, int hours)
+    {
+        try
+        {
+            Statement stmt = databaseConnector.createStatement();
+            String sqlString = "UPDATE Jobs SET totalHours = totalHours + '"+hours+"' WHERE jobId = '"+jobId+"'";
+            stmt.executeUpdate(sqlString);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateJobDays(int jobId, int days)
+    {
+        try
+        {
+            Statement stmt = databaseConnector.createStatement();
+            String sqlString = "UPDATE Jobs SET totalDays = '"+days+"' WHERE jobId = '"+jobId+"'";
+            stmt.executeUpdate(sqlString);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public int countDays(int jobId)
+    {
+        ResultSet rs = null;
+        int days = 0;
+
+        try
+        {
+            String sqlString = "SELECT COUNT(*) AS dayCount FROM Days WHERE jobId = '"+jobId+"' ";
+            rs = databaseConnector.createStatement().executeQuery(sqlString);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            if (rs.next())
+            {
+                days = rs.getInt("dayCount");
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return days;
     }
 
 }
