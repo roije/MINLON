@@ -2,13 +2,19 @@ package Controller;
 
 import Database.DB_NewDayHandler;
 import Model.Session;
+import View.CurrentStage;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -50,6 +56,7 @@ public class Controller_NewDay implements Initializable
         if (!newDayHandler.dayExists(Session.getCurrentJob().getJobId(), datePicker))
         {
             newDayHandler.saveDay(datePicker, fromBox, toBox);
+            changeToJobOverviewWindow();
         }
         else
         {
@@ -63,5 +70,24 @@ public class Controller_NewDay implements Initializable
     {
         errorIcon.setVisible(false);
         errorLabel.setVisible(false);
+    }
+
+    public void changeToJobOverviewWindow()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLJobOverview_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
     }
 }

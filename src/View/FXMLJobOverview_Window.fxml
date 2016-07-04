@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" stylesheets="@CSS_joboverview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_JobOverview">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" stylesheets="@CSS_joboverview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_JobOverview">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -46,24 +46,24 @@
       </HBox>
    </top>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" stylesheets="@CSS_joboverview.css" BorderPane.alignment="CENTER">
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" stylesheets="@CSS_joboverview.css" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" />
          </BorderPane.margin>
          <columns>
-            <TableColumn prefWidth="85.0" resizable="false" sortable="false" text="Dagur" />
-            <TableColumn prefWidth="87.0" resizable="false" text="Dagfesting" />
+            <TableColumn fx:id="dayColumn" prefWidth="85.0" resizable="false" sortable="false" text="Dagur" />
+            <TableColumn fx:id="dateColumn" prefWidth="87.0" resizable="false" text="Dagfesting" />
             <TableColumn prefWidth="476.6666259765625" resizable="false" text="Tímar">
                <columns>
-                  <TableColumn prefWidth="75.0" resizable="false" text="Tilsamans" />
-                  <TableColumn prefWidth="61.0" resizable="false" text="Vanligir" />
-                  <TableColumn prefWidth="75.0" resizable="false" text="1. yvirtíð" />
-                  <TableColumn prefWidth="75.0" resizable="false" text="2. yvirtíð" />
-                  <TableColumn prefWidth="91.0" resizable="false" text="Leygardagur" />
-                  <TableColumn prefWidth="130.0" resizable="false" text="Sunnu-/heilidagur" />
+                  <TableColumn fx:id="totalHoursColumn" prefWidth="75.0" resizable="false" text="Tilsamans" />
+                  <TableColumn fx:id="regularHoursColumn" prefWidth="61.0" resizable="false" text="Vanligir" />
+                  <TableColumn fx:id="firstOverColumn" prefWidth="75.0" resizable="false" text="1. yvirtíð" />
+                  <TableColumn fx:id="secondOverColumn" prefWidth="75.0" resizable="false" text="2. yvirtíð" />
+                  <TableColumn fx:id="saturdayColumn" prefWidth="91.0" resizable="false" text="Leygardagur" />
+                  <TableColumn fx:id="sundayColumn" prefWidth="130.0" resizable="false" text="Sunnu-/heilidagur" />
                </columns>
             </TableColumn>
-            <TableColumn resizable="false" text="Útgoldið" />
+            <TableColumn fx:id="totalPayColumn" resizable="false" text="Útgoldið" />
          </columns>
       </TableView>
    </center>

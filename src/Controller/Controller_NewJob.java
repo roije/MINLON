@@ -162,6 +162,4 @@ public class Controller_NewJob implements Initializable
         CurrentStage.setCurrentStage(stage);
         CurrentStage.showCurrentStage();
     }
-
-
 }
