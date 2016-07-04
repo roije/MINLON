@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" styleClass="backGround" stylesheets="@CSS_frontpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" styleClass="backGround" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_NewDay">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -51,15 +51,15 @@
       </HBox>
    </top>
    <center>
-      <VBox prefHeight="556.0" prefWidth="809.0" spacing="20.0" BorderPane.alignment="CENTER">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="620.0" spacing="20.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="100.0" left="100.0" right="100.0" top="50.0" />
          </BorderPane.margin>
          <children>
             <HBox prefHeight="47.0" prefWidth="600.0" spacing="25.0">
                <children>
-                  <Label styleClass="grayLabel" stylesheets="@../../../minlon_/src/View/CSS_newdaypage.css" text="Dagfesting:" />
-                  <DatePicker maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0">
+                  <Label styleClass="grayLabel" stylesheets="@CSS_newdaypage.css" text="Dagfesting:" />
+                  <DatePicker fx:id="datePicker" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0">
                      <HBox.margin>
                         <Insets top="5.0" />
                      </HBox.margin>
@@ -71,8 +71,8 @@
             </HBox>
             <HBox prefHeight="47.0" prefWidth="200.0">
                <children>
-                  <Label styleClass="grayLabel" stylesheets="@../../../minlon_/src/View/CSS_newdaypage.css" text="Frá:" />
-                  <ComboBox prefWidth="150.0">
+                  <Label styleClass="grayLabel" stylesheets="@CSS_newdaypage.css" text="Frá:" />
+                  <ComboBox fx:id="fromBox" editable="true" prefWidth="150.0" stylesheets="@CSS_newdaypage.css">
                      <HBox.margin>
                         <Insets left="132.0" />
                      </HBox.margin>
@@ -84,8 +84,8 @@
             </HBox>
             <HBox prefHeight="47.0" prefWidth="200.0">
                <children>
-                  <Label styleClass="grayLabel" stylesheets="@../../../minlon_/src/View/CSS_newdaypage.css" text="Til:" />
-                  <ComboBox prefWidth="150.0">
+                  <Label styleClass="grayLabel" stylesheets="@CSS_newdaypage.css" text="Til:" />
+                  <ComboBox fx:id="toBox" editable="true" prefWidth="150.0" stylesheets="@CSS_newdaypage.css">
                      <HBox.margin>
                         <Insets left="142.0" />
                      </HBox.margin>
@@ -97,7 +97,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
+                  <Button mnemonicParsing="false" onAction="#saveBtnAction" prefHeight="34.0" prefWidth="200.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
                      <HBox.margin>
                         <Insets left="285.0" />
                      </HBox.margin>
@@ -107,4 +107,8 @@
          </children>
       </VBox>
    </center>
+   <stylesheets>
+      <URL value="@CSS_frontpage.css" />
+      <URL value="@CSS_newdaypage.css" />
+   </stylesheets>
 </BorderPane>

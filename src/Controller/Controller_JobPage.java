@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 public class Controller_JobPage implements Initializable
 {
     @FXML
-    Button backBtnLogo, backBtnText, homeBtnLogo, homeBtnText;
+    Button backBtnLogo, backBtnText, homeBtnLogo, homeBtnText, newDayBtn, overviewBtn, editBtn;
 
     @FXML
     Label regularLabel, firstOverLabel, secondOverLabel, saturdayLabel, sundayLabel, jobNameLabel;
@@ -117,6 +117,25 @@ public class Controller_JobPage implements Initializable
             CurrentStage.setCurrentStage(stage);
             CurrentStage.showCurrentStage();
         }
+    }
+
+    public void changeToNewDayPage()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLNewDayPage_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
     }
 
 }

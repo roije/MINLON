@@ -72,12 +72,12 @@ public class DB_Tables
                     "(dayId TINYINT(4) NOT NULL AUTO_INCREMENT, " +
                     "dayName VARCHAR(13) NOT NULL, " +
                     "dayDate VARCHAR(14) NOT NULL, " +
-                    "totalHours TINYINT NOT NULL, " +
-                    "hoursReg TINYINT NOT NULL, " +
-                    "firstOver TINYINT NOT NULL, " +
-                    "secondOver TINYINT NOT NULL, " +
-                    "saturday TINYINT NOT NULL, " +
-                    "sunday TINYINT NOT NULL, " +
+                    "totalHours INTEGER NOT NULL, " +
+                    "hoursReg INTEGER NOT NULL, " +
+                    "firstOver INTEGER NOT NULL, " +
+                    "secondOver INTEGER NOT NULL, " +
+                    "saturday INTEGER NOT NULL, " +
+                    "sunday INTEGER NOT NULL, " +
                     "totalPay DOUBLE NOT NULL, " +
                     "jobId TINYINT(4) NOT NULL, " +
                     "FOREIGN KEY (jobId) REFERENCES Jobs(jobId), " +
