@@ -48,12 +48,14 @@ public class Controller_JobPage implements Initializable
                 Session.getCurrentJob().getTotalPay())));
         holidayLabel.setText(String.valueOf(calcHoliday(Session.getCurrentJob().getTotalPay())));
 
+
         if (Session.getCurrentJob().getTotalDays() == 0)
         {
             afterTaxLabel.setText("0.0");
             averageLabel.setText("0.0");
             holidayLabel.setText("0.0");
         }
+
 
     }
 
@@ -145,6 +147,25 @@ public class Controller_JobPage implements Initializable
         try
         {
             root = FXMLLoader.load(getClass().getResource("/View/FXMLNewDayPage_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
+    }
+
+    public void changeToJobOverviewWindow()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLJobOverview_Window.fxml"));
         } catch (IOException e)
         {
             e.printStackTrace();

@@ -13,7 +13,7 @@
          <children>
             <HBox fx:id="backAction" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="123.0" stylesheets="@CSS_accountpage.css">
                <children>
-                  <Button fx:id="backBtnLogo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="39.5" prefWidth="39.5" styleClass="backBtnLogo" text="Button">
+                  <Button fx:id="backBtnLogo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backAction" prefHeight="39.5" prefWidth="39.5" styleClass="backBtnLogo" text="Button">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -418,7 +418,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="overviewBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="192.0" styleClass="greenButton" text="Yvirlit" />
+                        <Button fx:id="overviewBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToJobOverviewWindow" prefHeight="50.0" prefWidth="192.0" styleClass="greenButton" text="Yvirlit" />
                      </children>
                   </HBox>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="240.0">

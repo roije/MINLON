@@ -12,6 +12,7 @@ public class Session
     //This string is used when the user is creating jobs
     //Its used to check if the last window was null or some string.
     //It is not null, return to previous window (NewJob) or return to FrontPage
+    //And when adding a new day
     private static String previousWindow;
 
 

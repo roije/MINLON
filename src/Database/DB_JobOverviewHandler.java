@@ -38,7 +38,12 @@ public class DB_JobOverviewHandler
                     day.setSecondOver(rs.getInt("secondOver"));
                     day.setSaturdayHour(rs.getInt("saturday"));
                     day.setSundayHour(rs.getInt("sunday"));
-                    day.setTotalPay(rs.getDouble("totalPay"));
+
+                    //Set total and calculate after tax
+                    double tax = 0.40;
+                    double totalPay = rs.getDouble("totalPay");
+                    day.setTotalPay(totalPay);
+                    day.setAfterTax(totalPay - totalPay * tax);
 
                     days.addAll(day);
                 }

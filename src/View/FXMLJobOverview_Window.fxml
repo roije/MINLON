@@ -12,7 +12,7 @@
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="123.0" stylesheets="@CSS_accountpage.css">
                <children>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
+                  <Button fx:id="backBtnLogo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -24,7 +24,7 @@
                         <Insets right="5.0" />
                      </padding>
                   </Button>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
+                  <Button fx:id="backBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
                </children>
                <HBox.margin>
                   <Insets left="20.0" top="20.0" />
@@ -51,9 +51,9 @@
             <Insets bottom="20.0" left="20.0" right="20.0" />
          </BorderPane.margin>
          <columns>
-            <TableColumn fx:id="dayColumn" prefWidth="85.0" resizable="false" sortable="false" text="Dagur" />
-            <TableColumn fx:id="dateColumn" prefWidth="87.0" resizable="false" text="Dagfesting" />
-            <TableColumn prefWidth="476.6666259765625" resizable="false" text="Tímar">
+            <TableColumn fx:id="dayColumn" prefWidth="92.0" resizable="false" text="Dagur" />
+            <TableColumn fx:id="dateColumn" prefWidth="92.0" resizable="false" text="Dagfesting" />
+            <TableColumn prefWidth="495.0" resizable="false" text="Tímar">
                <columns>
                   <TableColumn fx:id="totalHoursColumn" prefWidth="75.0" resizable="false" text="Tilsamans" />
                   <TableColumn fx:id="regularHoursColumn" prefWidth="61.0" resizable="false" text="Vanligir" />
@@ -63,7 +63,8 @@
                   <TableColumn fx:id="sundayColumn" prefWidth="130.0" resizable="false" text="Sunnu-/heilidagur" />
                </columns>
             </TableColumn>
-            <TableColumn fx:id="totalPayColumn" resizable="false" text="Útgoldið" />
+            <TableColumn fx:id="totalPayColumn" prefWidth="85.0" text="Løn" />
+            <TableColumn fx:id="afterTaxColumn" prefWidth="85.0" resizable="false" text="Útgoldið" />
          </columns>
       </TableView>
    </center>

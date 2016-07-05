@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -24,6 +25,9 @@ import java.util.ResourceBundle;
 public class Controller_NewDay implements Initializable
 {
     private DB_NewDayHandler newDayHandler = new DB_NewDayHandler();
+
+    @FXML
+    Button backBtn, backBtnLogo;
 
     @FXML
     ComboBox<String> fromBox, toBox;
@@ -56,7 +60,12 @@ public class Controller_NewDay implements Initializable
         if (!newDayHandler.dayExists(Session.getCurrentJob().getJobId(), datePicker))
         {
             newDayHandler.saveDay(datePicker, fromBox, toBox);
-            changeToJobOverviewWindow();
+
+            //Update the current job object
+            Session.getCurrentJob().setTotalHours(newDayHandler.getTotalHoursForSession(Session.getCurrentJob().getJobId()));
+            Session.getCurrentJob().setTotalPay(newDayHandler.getTotalPayForSession(Session.getCurrentJob().getJobId()));
+            Session.getCurrentJob().setTotalDays(newDayHandler.getTotalDaysForSession(Session.getCurrentJob().getJobId()));
+            changeToPreviousWindow();
         }
         else
         {
@@ -72,13 +81,13 @@ public class Controller_NewDay implements Initializable
         errorLabel.setVisible(false);
     }
 
-    public void changeToJobOverviewWindow()
+    public void changeToPreviousWindow()
     {
         Stage stage = new Stage();
         Parent root = null;
         try
         {
-            root = FXMLLoader.load(getClass().getResource("/View/FXMLJobOverview_Window.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLJobPage_Window.fxml"));
         } catch (IOException e)
         {
             e.printStackTrace();
@@ -90,4 +99,6 @@ public class Controller_NewDay implements Initializable
         CurrentStage.setCurrentStage(stage);
         CurrentStage.showCurrentStage();
     }
+
+
 }

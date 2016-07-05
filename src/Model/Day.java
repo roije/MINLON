@@ -15,6 +15,7 @@ public class Day
     private int saturdayHour;
     private int sundayHour;
     private double totalPay;
+    private double afterTax;
     private int jobId;
 
     public Day()
@@ -120,6 +121,16 @@ public class Day
     public void setTotalPay(double totalPay)
     {
         this.totalPay = totalPay;
+    }
+
+    public double getAfterTax()
+    {
+        return afterTax;
+    }
+
+    public void setAfterTax(double afterTax)
+    {
+        this.afterTax = afterTax;
     }
 
     public int getJobId()

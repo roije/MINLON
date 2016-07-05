@@ -360,4 +360,61 @@ public class DB_NewDayHandler
         return days;
     }
 
+    public int getTotalHoursForSession(int jobId)
+    {
+        ResultSet rs;
+        int hours = 0;
+        String sqlQuery = "SELECT totalHours FROM Jobs WHERE jobId = '"+jobId+"'";
+        try
+        {
+            rs = databaseConnector.createStatement().executeQuery(sqlQuery);
+            if (rs.next())
+            {
+                hours = rs.getInt("totalHours");
+            }
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return hours;
+    }
+
+    public int getTotalDaysForSession(int jobId)
+    {
+        ResultSet rs;
+        int days = 0;
+        String sqlQuery = "SELECT totalDays FROM Jobs WHERE jobId = '"+jobId+"'";
+        try
+        {
+            rs = databaseConnector.createStatement().executeQuery(sqlQuery);
+            if (rs.next())
+            {
+                days = rs.getInt("totalDays");
+            }
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return days;
+    }
+
+    public double getTotalPayForSession(int jobId)
+    {
+        ResultSet rs;
+        double totalPay = 0;
+        String sqlQuery = "SELECT totalPay FROM Jobs WHERE jobId = '"+jobId+"'";
+        try
+        {
+            rs = databaseConnector.createStatement().executeQuery(sqlQuery);
+            if (rs.next())
+            {
+                totalPay = rs.getDouble("totalPay");
+            }
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return totalPay;
+    }
+
 }
