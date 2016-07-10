@@ -6,13 +6,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" styleClass="windowBackground" stylesheets="@CSS_accountpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" styleClass="windowBackground" stylesheets="@CSS_accountpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_AccountWindow">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="123.0" stylesheets="@CSS_accountpage.css">
                <children>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
+                  <Button fx:id="backBtnLogo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -24,7 +24,7 @@
                         <Insets right="5.0" />
                      </padding>
                   </Button>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
+                  <Button fx:id="backBtnText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
                </children>
                <HBox.margin>
                   <Insets left="20.0" top="20.0" />
@@ -50,7 +50,7 @@
          <children>
             <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="600.0" spacing="2.0" styleClass="accountInfoBox" stylesheets="@CSS_accountpage.css">
                <VBox.margin>
-                  <Insets left="100.0" />
+                  <Insets left="172.0" />
                </VBox.margin>
                <children>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
@@ -67,7 +67,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="nameLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                   </HBox>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
@@ -81,7 +91,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="usernameLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />
@@ -98,7 +118,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="amountJobsLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />
@@ -115,7 +145,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="accounttInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="loginCountLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />
@@ -125,7 +165,7 @@
             </VBox>
             <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="600.0" spacing="2.0" styleClass="jobsInfoBox" stylesheets="@CSS_accountpage.css">
                <VBox.margin>
-                  <Insets left="100.0" />
+                  <Insets left="172.0" />
                </VBox.margin>
                <children>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
@@ -139,7 +179,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="totalHoursLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" top="10.0" />
@@ -149,14 +199,24 @@
                      <children>
                         <HBox prefHeight="32.0" prefWidth="200.0" styleClass="jobInsideBox1">
                            <children>
-                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Løn tilsamans v/skatt">
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Løn tilsamans u/skatt">
                                  <HBox.margin>
                                     <Insets left="10.0" top="6.0" />
                                  </HBox.margin>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="totalPayLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="9.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />
@@ -173,7 +233,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="bestJobLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />
@@ -190,7 +260,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="jobInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="mostHoursJobLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="8.0" />
+                                 </padding>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />
@@ -200,7 +280,7 @@
             </VBox>
             <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="600.0" spacing="2.0" styleClass="bestJobInfoBox" stylesheets="@CSS_accountpage.css">
                <VBox.margin>
-                  <Insets left="100.0" />
+                  <Insets left="172.0" />
                </VBox.margin>
                <children>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="505.0">
@@ -214,7 +294,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="bestJobNameLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="8.0" />
+                                 </padding>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" top="10.0" />
@@ -231,7 +321,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="bestJobHoursLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets right="8.0" />
+                           </padding></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />
@@ -241,14 +341,24 @@
                      <children>
                         <HBox prefHeight="32.0" prefWidth="200.0" styleClass="bestJobInsideBox1">
                            <children>
-                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Løn tilsamans v/skatt">
+                              <Label styleClass="labels" stylesheets="@CSS_login.css" text="Løn tilsamans u/skatt">
                                  <HBox.margin>
                                     <Insets left="10.0" top="6.0" />
                                  </HBox.margin>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="bestJobPayLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />
@@ -265,7 +375,17 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2" />
+                        <HBox prefHeight="32.0" prefWidth="306.0" styleClass="bestJobInsideBox2">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="313.0">
+                                 <children>
+                                    <Label fx:id="bestJobAverageLabel" styleClass="moneyLabel" stylesheets="@CSS_jobpage.css" text="Label" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children></HBox>
                      </children>
                      <VBox.margin>
                         <Insets left="40.0" />

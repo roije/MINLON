@@ -27,7 +27,7 @@ public class DB_Tables
                     "lastName VARCHAR(50) NOT NULL, " +
                     "username VARCHAR(30) NOT NULL, " +
                     "passwordHash VARCHAR(60) NOT NULL, " +
-                    "loginCount INTEGER NOT NULL DEFAULT 0, " +
+                    "loginCount INTEGER NOT NULL DEFAULT 1, " +
                     "PRIMARY KEY (userId))";
 
             stmt.executeUpdate(sqlString);

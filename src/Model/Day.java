@@ -14,8 +14,8 @@ public class Day
     private int secondOver;
     private int saturdayHour;
     private int sundayHour;
-    private double totalPay;
-    private double afterTax;
+    private String totalPay;
+    private String afterTax;
     private int jobId;
 
     public Day()
@@ -113,24 +113,24 @@ public class Day
         this.sundayHour = sundayHour;
     }
 
-    public double getTotalPay()
+    public String getTotalPay()
     {
         return totalPay;
     }
 
-    public void setTotalPay(double totalPay)
+    public void setTotalPay(String totalPay)
     {
         this.totalPay = totalPay;
     }
 
-    public double getAfterTax()
+    public String getAfterTax()
     {
         return afterTax;
     }
 
-    public void setAfterTax(double afterTax)
+    public String setAfterTax(String afterTax)
     {
-        this.afterTax = afterTax;
+        return  this.afterTax = afterTax;
     }
 
     public int getJobId()

@@ -30,6 +30,9 @@ public class Controller_JobPage implements Initializable
     @FXML
     Label totalHoursLabel, totalDaysLabel, beforeTaxLabel, afterTaxLabel, averageLabel, holidayLabel;
 
+    DecimalFormat numberFormat = new DecimalFormat("#.00");
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -42,8 +45,12 @@ public class Controller_JobPage implements Initializable
         totalHoursLabel.setText(String.valueOf(Session.getCurrentJob().getTotalHours()));
         totalDaysLabel.setText(String.valueOf(Session.getCurrentJob().getTotalDays()));
 
-        beforeTaxLabel.setText(String.valueOf(Session.getCurrentJob().getTotalPay()));
-        afterTaxLabel.setText(String.valueOf(calcTaxPay(Session.getCurrentJob().getTotalPay())));
+        double beforeTax = Session.getCurrentJob().getTotalPay();
+        String beforeTaxString = numberFormat.format(beforeTax).replace(",",".");
+        beforeTaxLabel.setText(beforeTaxString);
+
+        afterTaxLabel.setText(calcTaxPay(Session.getCurrentJob().getTotalPay()));
+
         averageLabel.setText(String.valueOf(calcAveragePay(Session.getCurrentJob().getTotalDays(),
                 Session.getCurrentJob().getTotalPay())));
         holidayLabel.setText(String.valueOf(calcHoliday(Session.getCurrentJob().getTotalPay())));
@@ -55,8 +62,6 @@ public class Controller_JobPage implements Initializable
             averageLabel.setText("0.0");
             holidayLabel.setText("0.0");
         }
-
-
     }
 
     public String calcTaxPay(double totalPay)

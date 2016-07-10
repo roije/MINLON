@@ -5,6 +5,7 @@ import Model.Job;
 import Model.Session;
 import View.CurrentStage;
 import com.sun.xml.internal.ws.api.FeatureConstructor;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -51,6 +52,20 @@ public class Controller_FrontPage implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
+        //Focus on first row when starting window
+        Platform.runLater(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+
+                jobsList.requestFocus();
+                jobsList.getSelectionModel().select(0);
+                jobsList.getFocusModel().focus(0);
+
+            }
+        });
+
         Date currentTime = calendar.getTime();
 
         int hour = checkTimeOfDay();
@@ -124,6 +139,37 @@ public class Controller_FrontPage implements Initializable
     {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLNewJobPage.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
+    }
+
+    public void changeToUpdateAccountWindow() throws IOException
+    {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLEditAccountPage_Window.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
+    }
+
+    public void changeToAccountWindow()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLAccount_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
         Scene scene = new Scene(root);
         stage.setScene(scene);
 

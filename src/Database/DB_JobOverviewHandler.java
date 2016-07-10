@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;
+import java.text.DecimalFormat;
 
 /**
  * Created by roije on 04/07/2016.
@@ -42,8 +43,12 @@ public class DB_JobOverviewHandler
                     //Set total and calculate after tax
                     double tax = 0.40;
                     double totalPay = rs.getDouble("totalPay");
-                    day.setTotalPay(totalPay);
-                    day.setAfterTax(totalPay - totalPay * tax);
+                    double afterTax = totalPay - (totalPay * tax);
+
+                    //I only want to decimals for the float numbers
+                    DecimalFormat numberFormat = new DecimalFormat("#.00");
+                    day.setTotalPay(numberFormat.format(totalPay).replace(",","."));
+                    day.setAfterTax(numberFormat.format(afterTax).replace(",","."));
 
                     days.addAll(day);
                 }
