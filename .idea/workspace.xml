@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73841b41-0bae-4436-8bb9-659d94b2d422" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Controller_AccountWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Database/DB_AccountWindowHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/BestJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Database/DB_EditAccountHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minlon/View/FXMLAccount_Window.fxml" afterPath="$PROJECT_DIR$/out/production/Minlon/View/FXMLAccount_Window.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minlon/View/FXMLFrontPage_Window.fxml" afterPath="$PROJECT_DIR$/out/production/Minlon/View/FXMLFrontPage_Window.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Controller_FrontPage.java" afterPath="$PROJECT_DIR$/src/Controller/Controller_FrontPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Controller_JobPage.java" afterPath="$PROJECT_DIR$/src/Controller/Controller_JobPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database/DB_JobOverviewHandler.java" afterPath="$PROJECT_DIR$/src/Database/DB_JobOverviewHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database/DB_Tables.java" afterPath="$PROJECT_DIR$/src/Database/DB_Tables.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Day.java" afterPath="$PROJECT_DIR$/src/Model/Day.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/FXMLAccount_Window.fxml" afterPath="$PROJECT_DIR$/src/View/FXMLAccount_Window.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/FXMLFrontPage_Window.fxml" afterPath="$PROJECT_DIR$/src/View/FXMLFrontPage_Window.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Controller_EditAccount.java" afterPath="$PROJECT_DIR$/src/Controller/Controller_EditAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/FXMLEditAccountPage_Window.fxml" afterPath="$PROJECT_DIR$/src/View/FXMLEditAccountPage_Window.fxml" />
     </list>
     <ignored path="Minlon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,76 +28,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller_JobOverview.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Controller_JobOverview.java">
+      <file leaf-file-name="Controller_EditAccount.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Controller_EditAccount.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="83" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller_JobPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Controller_JobPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <caret line="157" column="5" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB_AccountWindowHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/DB_AccountWindowHandler.java">
+      <file leaf-file-name="DB_Connector.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Database/DB_Connector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1468152109000" expanded="true" signature="494:558" placeholder="SELECT COUNT... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="1002:1084" placeholder="SELECT SUM(t... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="1550:1624" placeholder="SELECT SUM(t... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2093:2124" placeholder="SELECT jobNa... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2093:2135" placeholder="SELECT jobNa... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2093:2203" placeholder="SELECT jobNa... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2093:2204" placeholder="SELECT jobNa... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2093:2216" placeholder="SELECT jobNa... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2093:2229" placeholder="SELECT jobNa... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2093:2242" placeholder="SELECT jobNa... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2156:2203" placeholder="(SELECT MAX(... " />
-                <marker date="1468152109000" expanded="true" signature="2157:2182" placeholder="SELECT MAX(t... " />
-                <marker date="1468152109000" expanded="true" signature="2157:2200" placeholder="SELECT MAX(t... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2157:2203" placeholder="SELECT MAX(t... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2712:2865" placeholder="SELECT jobNa... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="2778:2838" placeholder="SELECT MAX(t... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="3299:3442" placeholder="SELECT * FRO... Jobs" />
-                <marker date="1468152109000" expanded="true" signature="3357:3415" placeholder="SELECT MAX(t... Jobs" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller_AccountWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Controller_AccountWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="84" selection-start-line="68" selection-start-column="84" selection-end-line="68" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BestJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/BestJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="83" selection-start-line="56" selection-start-column="83" selection-end-line="56" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.03448276">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextInputControl.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="347" column="35" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextField.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TextField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding>
+                <element signature="e#3264#3265#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DB_EditAccountHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Database/DB_EditAccountHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1469984146000" expanded="true" signature="528:583" placeholder="SELECT first... Users" />
+                <marker date="1469984146000" expanded="true" signature="1046:1100" placeholder="SELECT first... Users" />
+                <marker date="1469984146000" expanded="true" signature="1579:1656" placeholder="SELECT FROM Users" />
+                <marker date="1469984146000" expanded="true" signature="2213:2295" placeholder="UPDATE Users... " />
+                <marker date="1469984146000" expanded="true" signature="3056:3156" placeholder="UPDATE Users... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionImpl.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../DATV1_copy/mysql-connector-java-5.1.37/mysql-connector-java-5.1.37-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.296296">
+              <caret line="1671" column="30" selection-start-line="1671" selection-start-column="30" selection-end-line="1671" selection-end-column="30" />
+              <folding>
+                <marker date="1444145078000" expanded="true" signature="91138:91167" placeholder="SELECT @@ses... " />
+                <marker date="1444145078000" expanded="true" signature="105560:105587" placeholder="SELECT @@ses... " />
+                <marker date="1444145078000" expanded="true" signature="107831:107860" placeholder="select @@ses... " />
+                <marker date="1444145078000" expanded="true" signature="114927:114942" placeholder="/* missingVa... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller_FrontPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Controller_FrontPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="e#593#594#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Session.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Session.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#605#606#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,55 +140,8 @@
         <entry file="file://$PROJECT_DIR$/src/Controller/Controller_NewAccount.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+              <caret line="103" column="12" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="77" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DB_CreateDatabase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/DB_CreateDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller_FrontPage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Controller_FrontPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51724136">
-              <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DB_CreateAccountHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/DB_CreateAccountHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="72" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="72" />
-              <folding>
-                <marker date="1465986608000" expanded="true" signature="617:668" placeholder="SELECT * FRO... Users" />
-                <marker date="1465986608000" expanded="true" signature="1097:1200" placeholder="INSERT INTO Users... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DB_Tables.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/DB_Tables.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-              <folding>
-                <marker date="1468154204000" expanded="true" signature="417:857" placeholder="CREATE TABLE... IF" />
-                <marker date="1468154204000" expanded="true" signature="1084:1863" placeholder="CREATE TABLE... IF" />
-                <marker date="1468154204000" expanded="true" signature="2089:2840" placeholder="CREATE TABLE... IF" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -190,8 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/View/FXMLEditAccountPage_Window.fxml" />
-        <option value="$PROJECT_DIR$/src/Controller/Controller_EditAccount.java" />
         <option value="$PROJECT_DIR$/src/View/FXMLEditJobPage_Window.css" />
         <option value="$PROJECT_DIR$/src/View/FXMLEditJobPage_Window.fxml" />
         <option value="$PROJECT_DIR$/src/Database/CreateDatabase.java" />
@@ -241,6 +217,8 @@
         <option value="$PROJECT_DIR$/src/Controller/Controller_JobPage.java" />
         <option value="$PROJECT_DIR$/src/Controller/Controller_AccountWindow.java" />
         <option value="$PROJECT_DIR$/src/Controller/Controller_FrontPage.java" />
+        <option value="$PROJECT_DIR$/src/Database/DB_EditAccountHandler.java" />
+        <option value="$PROJECT_DIR$/src/Controller/Controller_EditAccount.java" />
       </list>
     </option>
   </component>
@@ -286,9 +264,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Minlon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysql-connector-java-5.1.37-bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysql-connector-java-5.1.37-bin.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Minlon" />
@@ -437,8 +433,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -944,7 +940,9 @@
       <workItem from="1467636351173" duration="7335000" />
       <workItem from="1467726081522" duration="5233000" />
       <workItem from="1467974125141" duration="603000" />
-      <workItem from="1468145986905" duration="11336000" />
+      <workItem from="1468145986905" duration="12545000" />
+      <workItem from="1468188780545" duration="351000" />
+      <workItem from="1469978105119" duration="5741000" />
     </task>
     <task id="LOCAL-00001" summary="TESTROI">
       <created>1464468561834</created>
@@ -1084,11 +1082,17 @@
       <option name="project" value="LOCAL" />
       <updated>1467730170501</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="10juli">
+      <created>1468170261547</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1468170261547</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153401000" />
+    <option name="totallyTimeSpent" value="160702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="719" extended-state="6" />
@@ -1098,10 +1102,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.47092083" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.261563" sideWeight="0.5274637" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.261563" sideWeight="0.5371567" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.261563" sideWeight="0.47253636" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.261563" sideWeight="0.4628433" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1110,7 +1114,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990461" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39872408" sideWeight="0.49353796" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1154,7 +1158,8 @@
     <MESSAGE value="4 juli2" />
     <MESSAGE value="SaveDayAndGoToDayOverview" />
     <MESSAGE value="5juli" />
-    <option name="LAST_COMMIT_MESSAGE" value="5juli" />
+    <MESSAGE value="10juli" />
+    <option name="LAST_COMMIT_MESSAGE" value="10juli" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1166,7 +1171,7 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1175,36 +1180,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/View/FXMLNewDayPage_Window.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Icons/CollapseArrow-48.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Icons/ExpandArrow-48.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/FXMLLogin_Window.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/FXMLNewJobPage.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1232,13 +1207,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625">
           <caret line="105" column="25" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/DB_Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1283,13 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.5283017">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1401,7 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,20 +1376,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Controller_NewDay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1438,36 +1390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
-          <folding>
-            <element signature="e#1925#1926#0" expanded="true" />
-            <element signature="e#1956#1957#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2048#2049#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2118#2119#0" expanded="true" />
-            <element signature="e#2172#2173#0" expanded="true" />
-            <element signature="e#2220#2221#0" expanded="true" />
-            <element signature="e#2324#2325#0" expanded="true" />
-            <element signature="e#2358#2359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Controller_NewJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="163" column="5" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/DB_FrontPageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <marker date="1466102381000" expanded="true" signature="664:710" placeholder="SELECT * FRO... Jobs" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1475,26 +1397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="341" column="48" selection-start-line="341" selection-start-column="48" selection-end-line="341" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1467728452000" expanded="true" signature="2081:2276" placeholder="INSERT INTO Days... " />
-            <marker date="1467728452000" expanded="true" signature="8419:8488" placeholder="SELECT * FRO... Days" />
-            <marker date="1467728452000" expanded="true" signature="8994:9071" placeholder="UPDATE Jobs " />
-            <marker date="1467728452000" expanded="true" signature="9397:9476" placeholder="UPDATE Jobs " />
-            <marker date="1467728452000" expanded="true" signature="9800:9864" placeholder="UPDATE Jobs " />
-            <marker date="1467728452000" expanded="true" signature="10159:10222" placeholder="SELECT COUNT... Days" />
-            <marker date="1467728452000" expanded="true" signature="10768:10821" placeholder="SELECT total... Jobs" />
-            <marker date="1467728452000" expanded="true" signature="11268:11320" placeholder="SELECT total... Jobs" />
-            <marker date="1467728452000" expanded="true" signature="11773:11824" placeholder="SELECT total... Jobs" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Controller_EditAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1502,10 +1404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="34" />
-          <folding>
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1782#1783#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1513,10 +1411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1467730833000" expanded="true" signature="569:772" placeholder="SELECT dayNa... Days" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1524,48 +1418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/DB_LoginHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="67" selection-start-line="55" selection-start-column="67" selection-end-line="55" selection-end-column="67" />
-          <folding>
-            <marker date="1466002694000" expanded="true" signature="514:552" placeholder="SELECT * FRO... Users" />
-            <marker date="1466002694000" expanded="true" signature="514:565" placeholder="SELECT * FRO... Users" />
-            <marker date="1466002694000" expanded="true" signature="1536:1588" placeholder="Update Users... " />
-            <marker date="1466002694000" expanded="true" signature="1536:1599" placeholder="Update Users... " />
-            <marker date="1466002694000" expanded="true" signature="1536:1612" placeholder="Update Users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Controller_NewAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/DB_CreateDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/DB_CreateAccountHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="72" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="72" />
-          <folding>
-            <marker date="1465986608000" expanded="true" signature="617:668" placeholder="SELECT * FRO... Users" />
-            <marker date="1465986608000" expanded="true" signature="1097:1200" placeholder="INSERT INTO Users... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1573,11 +1425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <marker date="1468154204000" expanded="true" signature="417:857" placeholder="CREATE TABLE... IF" />
-            <marker date="1468154204000" expanded="true" signature="1084:1863" placeholder="CREATE TABLE... IF" />
-            <marker date="1468154204000" expanded="true" signature="2089:2840" placeholder="CREATE TABLE... IF" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1585,9 +1432,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="83" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,7 +1441,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#4000#4001#0" expanded="false" />
+            <element signature="e#4030#4031#0" expanded="false" />
             <marker date="1468152109000" expanded="true" signature="494:558" placeholder="SELECT COUNT... Jobs" />
             <marker date="1468152109000" expanded="true" signature="1002:1084" placeholder="SELECT SUM(t... Jobs" />
             <marker date="1468152109000" expanded="true" signature="1550:1624" placeholder="SELECT SUM(t... Jobs" />
@@ -1623,7 +1469,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="83" selection-start-line="56" selection-start-column="83" selection-end-line="56" selection-end-column="83" />
-          <folding />
+          <folding>
+            <element signature="e#462#463#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#565#566#0" expanded="false" />
+            <element signature="e#598#599#0" expanded="false" />
+            <element signature="e#626#627#0" expanded="false" />
+            <element signature="e#669#670#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
+            <element signature="e#763#764#0" expanded="false" />
+            <element signature="e#802#803#0" expanded="false" />
+            <element signature="e#832#833#0" expanded="false" />
+            <element signature="e#873#874#0" expanded="false" />
+            <element signature="e#906#907#0" expanded="false" />
+            <element signature="e#1131#1132#0" expanded="false" />
+            <element signature="e#1158#1159#0" expanded="false" />
+            <element signature="e#1199#1200#0" expanded="false" />
+            <element signature="e#1231#1232#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1631,9 +1496,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="84" selection-start-line="68" selection-start-column="84" selection-end-line="68" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1641,14 +1504,162 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="32" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Controller_NewJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="40" selection-start-line="47" selection-start-column="5" selection-end-line="62" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4975#4976#0" expanded="false" />
+            <element signature="e#5017#5018#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/DB_CreateDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/DB_FrontPageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1466102381000" expanded="true" signature="664:710" placeholder="SELECT * FRO... Jobs" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/DB_LoginHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="23" selection-start-line="23" selection-start-column="7" selection-end-line="50" selection-end-column="23" />
+          <folding>
+            <marker date="1466002694000" expanded="true" signature="514:552" placeholder="SELECT * FRO... Users" />
+            <marker date="1466002694000" expanded="true" signature="514:565" placeholder="SELECT * FRO... Users" />
+            <marker date="1466002694000" expanded="true" signature="1536:1588" placeholder="Update Users... " />
+            <marker date="1466002694000" expanded="true" signature="1536:1599" placeholder="Update Users... " />
+            <marker date="1466002694000" expanded="true" signature="1536:1612" placeholder="Update Users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/DB_CreateAccountHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1465986608000" expanded="true" signature="617:668" placeholder="SELECT * FRO... Users" />
+            <marker date="1465986608000" expanded="true" signature="1097:1200" placeholder="INSERT INTO Users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Controller_NewAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="12" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#3264#3265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="347" column="35" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#605#606#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#593#594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../DATV1_copy/mysql-connector-java-5.1.37/mysql-connector-java-5.1.37-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.296296">
+          <caret line="1671" column="30" selection-start-line="1671" selection-start-column="30" selection-end-line="1671" selection-end-column="30" />
+          <folding>
+            <marker date="1444145078000" expanded="true" signature="91138:91167" placeholder="SELECT @@ses... " />
+            <marker date="1444145078000" expanded="true" signature="105560:105587" placeholder="SELECT @@ses... " />
+            <marker date="1444145078000" expanded="true" signature="107831:107860" placeholder="select @@ses... " />
+            <marker date="1444145078000" expanded="true" signature="114927:114942" placeholder="/* missingVa... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Controller_FrontPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51724136">
+        <state vertical-scroll-proportion="0.0">
           <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/DB_EditAccountHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1469984146000" expanded="true" signature="528:583" placeholder="SELECT first... Users" />
+            <marker date="1469984146000" expanded="true" signature="1046:1100" placeholder="SELECT first... Users" />
+            <marker date="1469984146000" expanded="true" signature="1579:1656" placeholder="SELECT FROM Users" />
+            <marker date="1469984146000" expanded="true" signature="2213:2295" placeholder="UPDATE Users... " />
+            <marker date="1469984146000" expanded="true" signature="3056:3156" placeholder="UPDATE Users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Controller_EditAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="157" column="5" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/DB_Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03448276">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>

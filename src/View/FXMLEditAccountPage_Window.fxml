@@ -6,14 +6,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" styleClass="background" stylesheets="@CSS_newaccountpage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_EditAccount">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="123.0" stylesheets="@CSS_accountpage.css">
                <children>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
+                  <Button fx:id="backBtnLogo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -25,7 +24,7 @@
                         <Insets right="5.0" />
                      </padding>
                   </Button>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
+                  <Button fx:id="backBtnText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
                </children>
                <HBox.margin>
                   <Insets left="20.0" top="20.0" />
@@ -47,9 +46,9 @@
       </HBox>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" stylesheets="@CSS_newaccountpage.css" BorderPane.alignment="CENTER">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" spacing="20.0" stylesheets="@CSS_newaccountpage.css" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets bottom="100.0" left="100.0" right="100.0" top="20.0" />
+            <Insets bottom="100.0" left="160.0" right="100.0" top="100.0" />
          </BorderPane.margin>
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0">
@@ -59,7 +58,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <TextField fx:id="firstNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#removeErrorStuff" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="122.0" />
                      </HBox.margin>
@@ -76,7 +75,7 @@
                         <Insets top="4.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                  <TextField fx:id="lastNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#removeErrorStuff" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                      <HBox.margin>
                         <Insets left="113.0" />
                      </HBox.margin>
@@ -115,7 +114,7 @@
                               <Insets top="4.0" />
                            </HBox.margin>
                         </Label>
-                        <PasswordField fx:id="currentPassField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                        <PasswordField fx:id="currentPassField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#removeErrorStuff" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -129,7 +128,7 @@
                               <Insets top="4.0" />
                            </HBox.margin>
                         </Label>
-                        <PasswordField fx:id="newPassField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                        <PasswordField fx:id="newPassField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#removeErrorStuff" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -143,7 +142,7 @@
                               <Insets top="4.0" />
                            </HBox.margin>
                         </Label>
-                        <PasswordField fx:id="repeatPassField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
+                        <PasswordField fx:id="repeatPassField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#removeErrorStuff" prefHeight="30.0" prefWidth="262.0" styleClass="textField">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -152,13 +151,30 @@
                   </HBox>
                </children>
             </VBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="44.0" prefWidth="600.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="262.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveAction" prefHeight="39.0" prefWidth="262.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
                      <HBox.margin>
                         <Insets left="243.0" />
                      </HBox.margin>
                   </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="601.0" spacing="10.0">
+               <children>
+                  <ImageView fx:id="errorIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Icons/Attention-48.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="errorLabel" styleClass="errorLabel" stylesheets="@CSS_newjobpage.css" visible="false">
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </Label>
                </children>
             </HBox>
          </children>
