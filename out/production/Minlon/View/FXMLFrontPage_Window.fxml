@@ -109,24 +109,27 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="headerLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="624.0" styleClass="welcomeTitle" stylesheets="@CSS_frontpage.css" text="Góðan dagin, *insert name*.">
+                  <Label fx:id="headerLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="561.0" styleClass="welcomeTitle" stylesheets="@CSS_frontpage.css" text="Góðan dagin, *insert name*.">
                      <HBox.margin>
                         <Insets left="60.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <VBox alignment="TOP_RIGHT" prefHeight="75.0" prefWidth="203.0" spacing="5.0">
+                  <VBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="75.0" prefWidth="203.0" spacing="5.0">
                      <children>
                         <Label fx:id="dayLabel" styleClass="dateLabel" text="mánadagur">
                            <VBox.margin>
                               <Insets right="10.0" />
                            </VBox.margin>
                         </Label>
-                        <Label fx:id="dateLabel" styleClass="dateLabel" text="15. juni 2016">
+                        <Label fx:id="dateLabel" styleClass="dateLabel" text="15. septembur 2016">
                            <VBox.margin>
                               <Insets right="10.0" />
                            </VBox.margin>
                         </Label>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </VBox>
                </children>
             </HBox>

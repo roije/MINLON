@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73841b41-0bae-4436-8bb9-659d94b2d422" name="Default" comment="Fixed month issue">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pics/Screen Shot 2016-09-20 at 17.51.55.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Controller_EditJob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Database/DB_EditJobHandler.java" />
+    <list default="true" id="73841b41-0bae-4436-8bb9-659d94b2d422" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pics/Screen Shot 2016-09-20 at 17.51.55.png" afterPath="$PROJECT_DIR$/pics/Screen Shot 2016-09-20 at 17.51.55.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Controller_JobPage.java" afterPath="$PROJECT_DIR$/src/Controller/Controller_JobPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RunPackage/RunApp.java" afterPath="$PROJECT_DIR$/src/RunPackage/RunApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/FXMLEditJobPage_Window.fxml" afterPath="$PROJECT_DIR$/src/View/FXMLEditJobPage_Window.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/FXMLFrontPage_Window.fxml" afterPath="$PROJECT_DIR$/src/View/FXMLFrontPage_Window.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/FXMLJobPage_Window.fxml" afterPath="$PROJECT_DIR$/src/View/FXMLJobPage_Window.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minlon/View/FXMLFrontPage_Window.fxml" afterPath="$PROJECT_DIR$/out/production/Minlon/View/FXMLFrontPage_Window.fxml" />
     </list>
     <ignored path="Minlon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -954,7 +948,7 @@
       <workItem from="1470154237052" duration="1071000" />
       <workItem from="1470950484202" duration="1858000" />
       <workItem from="1471891757059" duration="621000" />
-      <workItem from="1474386338982" duration="535000" />
+      <workItem from="1474386338982" duration="1122000" />
     </task>
     <task id="LOCAL-00001" summary="TESTROI">
       <created>1464468561834</created>
@@ -1106,11 +1100,17 @@
       <option name="project" value="LOCAL" />
       <updated>1469992393707</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fixed month issue">
+      <created>1474386887889</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1474386887889</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166229000" />
+    <option name="totallyTimeSpent" value="166816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="719" extended-state="6" />
