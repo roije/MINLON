@@ -42,6 +42,4 @@ public class RunApp extends Application
         CurrentStage.setCurrentStage(primaryStage);
         CurrentStage.showCurrentStage();
     }
-
-
 }

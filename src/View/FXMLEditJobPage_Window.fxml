@@ -6,14 +6,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller_EditJob">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="123.0" stylesheets="@CSS_accountpage.css">
                <children>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
+                  <Button fx:id="backBtnIcon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="40.0" styleClass="backBtnLogo" text="Button">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -25,7 +24,7 @@
                         <Insets right="5.0" />
                      </padding>
                   </Button>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
+                  <Button fx:id="backBtnText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToPreviousWindow" prefHeight="40.0" prefWidth="90.0" styleClass="backBtn" text="Aftur" />
                </children>
                <HBox.margin>
                   <Insets left="20.0" top="20.0" />
@@ -47,9 +46,9 @@
       </HBox>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="399.0" prefWidth="653.0" spacing="20.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets bottom="100.0" left="100.0" right="100.0" top="20.0" />
+            <Insets bottom="100.0" left="130.0" right="100.0" top="30.0" />
          </BorderPane.margin>
          <children>
             <HBox prefHeight="20.0" prefWidth="560.0" spacing="20.0">
@@ -59,7 +58,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="335.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                  <TextField fx:id="jobNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="335.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
                      <HBox.margin>
                         <Insets left="55.0" />
                      </HBox.margin>
@@ -76,7 +75,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                  <TextField fx:id="regularPayField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
                      <HBox.margin>
                         <Insets left="87.0" />
                      </HBox.margin>
@@ -98,7 +97,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                  <TextField fx:id="firstOverField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
                      <HBox.margin>
                         <Insets left="68.0" />
                      </HBox.margin>
@@ -120,7 +119,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                  <TextField fx:id="sevondOverField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
                      <HBox.margin>
                         <Insets left="74.0" />
                      </HBox.margin>
@@ -142,7 +141,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                  <TextField fx:id="saturdayPayField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
                      <HBox.margin>
                         <Insets left="62.0" />
                      </HBox.margin>
@@ -164,7 +163,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
+                  <TextField fx:id="sunnudayPayField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" styleClass="textField" stylesheets="@CSS_newjobpage.css">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -181,7 +180,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="280.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
+                  <Button fx:id="saveBtn" mnemonicParsing="false" prefHeight="39.0" prefWidth="280.0" styleClass="saveBtn" stylesheets="@CSS_newdaypage.css" text="Goym">
                      <HBox.margin>
                         <Insets left="263.0" />
                      </HBox.margin>

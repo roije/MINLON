@@ -183,4 +183,23 @@ public class Controller_JobPage implements Initializable
         CurrentStage.showCurrentStage();
     }
 
+    public void changeToEditJobWindow()
+    {
+        Stage stage = new Stage();
+        Parent root = null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("/View/FXMLEditJobPage_Window.fxml"));
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        CurrentStage.getCurrentStage().close();
+        CurrentStage.setCurrentStage(stage);
+        CurrentStage.showCurrentStage();
+    }
+
 }

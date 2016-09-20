@@ -432,7 +432,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="editBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="192.0" styleClass="greenButton" text="Dagfør" />
+                        <Button fx:id="editBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeToEditJobWindow" prefHeight="50.0" prefWidth="192.0" styleClass="greenButton" text="Dagfør" />
                      </children>
                   </HBox>
                </children>
